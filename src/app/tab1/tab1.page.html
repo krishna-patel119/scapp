@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Songs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let song of songs" (click)="playSong(song.url, song.title)">
+      <ion-label>{{ song.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<div class="player" style="color: black;">
+  <div class="progress-bar">
+    <div class="progress" [style.width]=" '42%'"></div>
+  </div>
+  <ion-row class="ion-no-padding">
+    <ion-col size="2" class="ion-no-padding">
+      <img src="/assets/sasli.jpg" alt="">
+    </ion-col>
+    <ion-col size="8">
+      <b>{{ showTitle }}</b><br>
+      <span>kishuuuuuu</span>
+    </ion-col>
+    <ion-col size="2" (click)="togglePlayPause()">
+      <ion-icon name="play-sharp" color="light" size="large"></ion-icon>
+    </ion-col>
+  </ion-row>
+</div>

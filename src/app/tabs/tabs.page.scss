@@ -1,0 +1,21 @@
+.player{
+    height: 55px;
+    background: #fff;
+    color: black;
+    font-size: small;
+
+    .progress-bar{
+        width: 100%;
+        height: 2px;
+        background: palevioletred;
+
+        .progress{
+            background: wheat;
+            height: 100%;
+        }
+    }
+}
+
+div{
+    background-color: pink;
+}
